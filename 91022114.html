@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <style>
+    #profile {
+      text-align: center;
+    }
+    #avatar {
+      border: 2px solid black;
+      border-radius: 20px; /* 調整圓邊半徑 */
+      width: 150px; /* 調整寬度 */
+      height: 150px; /* 調整高度 */
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="profile">
+    <h1 id="studentId">學號: 91022114</h1>
+    <h2 id="name">姓名: 陳彥銘</h2>
+    <img id="avatar" src="52901603_2284996781822627_8501993573246304256_n.jpg" alt="大頭照">
+    <br>
+    <button onclick="adjustText()">按鈕1可以調整 學號、姓名的字體和顏色</button>
+    <button onclick="adjustAvatar()">按鈕2可以調整 大頭照為圓邊、紅色粗框</button>
+    <button onclick="changeAvatar()">按鈕3可以換圖 大頭照為生活照</button>
+  </div>
+
+  <script>
+    function adjustText() {
+      document.getElementById('studentId').style.fontSize = '50px';
+      document.getElementById('name').style.fontSize = '50px';
+      document.getElementById('studentId').style.color = 'blue';
+      document.getElementById('name').style.color = 'green';
+    }
+
+    function adjustAvatar() {
+      document.getElementById('avatar').style.border = '4px solid red';
+      document.getElementById('avatar').style.borderRadius = '10px';
+    }
+
+    function changeAvatar() {
+      document.getElementById('avatar').src = '11406719_1435839506738363_5898906001955978070_n.jpg';
+    }
+  </script>
+</body>
+</html>
